@@ -1,0 +1,12 @@
+<mvc:View controllerName="routingnavigation01.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <!-- Root App control.
+         Its ID must match controlId="app" in manifest.json.
+         The router places Home and Detail pages inside its pages aggregation. -->
+
+    <App id="app">
+    </App>
+</mvc:View>

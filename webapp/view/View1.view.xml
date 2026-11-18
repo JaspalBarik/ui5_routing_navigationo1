@@ -1,0 +1,29 @@
+<mvc:View controllerName="routingnavigation01.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+        <!-- Home page containing the employee list. -->
+
+    <Page id="page" title="{i18n>title}">
+    <content>
+
+    <!-- List displays employee records from the default JSONModel.
+    /Employees is the absolute binding path. -->
+    <List
+    headerText="Employees" 
+    items="{/Employees}">
+
+        <!-- StandardListItem is created for each employee.
+        {name} and {designation} are relative bindings.
+        Navigation type displays a navigation indicator.
+        press calls onEmployeePress() in View1.controller.js. -->
+    <StandardListItem 
+    title="{name}"
+    description="{designation}"
+    type="Navigation"
+    press=".onEmployeePress"
+    />
+    </List>
+    </content>
+    </Page>
+</mvc:View>

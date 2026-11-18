@@ -1,0 +1,46 @@
+
+<mvc:View
+    controllerName="routingnavigation01.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <!-- Detail page displays the selected employee's information. -->
+    <Page
+        id="detailPage"
+        title="Employee Details"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+
+       <!-- Display the Back button in the page header. -->
+        showNavButton="true"
+
+        <!-- When Back is clicked, call onNavBack()
+             from Detail.controller.js. -->
+        <content>
+
+                <!-- VBox arranges the employee details vertically.
+                 The Detail controller uses bindElement() to set
+                 the selected employee as this view's binding context. -->
+            <VBox
+            class="sapUiMediumMargin">
+
+         <!-- Relative bindings read values from the selected employee. -->
+         <Label text="Employee ID"  />   
+         <Input value="{employeeId}" />   
+
+         <Label text="Employee Name" />
+         <Input value="{name}" />
+
+         <Label text="Designation" />
+         <Input value="{designation}" />
+
+         <Label text="Department" />
+         <Input value="{department}" />
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>
